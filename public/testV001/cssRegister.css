@@ -1,0 +1,80 @@
+/* auth */
+
+/* ===== AUTH ===== */
+
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ошибки */
+.error {
+    color: #EF4444;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* чекбокс */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+}
+
+/* full width */
+.w-100 {
+    width: 100%;
+}
+
+/* ===== FIX BOOTSTRAP COLORS ===== */
+
+label {
+    color: var(--text);
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    color: var(--text);
+    background: var(--surface);
+}
+
+input::placeholder {
+    color: var(--text-muted);
+}
+
+/* убираем bootstrap form-control */
+.form-control {
+    all: unset;
+}
+
+/* если bootstrap всё ещё лезет */
+.card-header {
+    background: transparent;
+    border: none;
+    color: var(--text);
+}
+
+/* текст внутри формы */
+.auth-card, 
+.auth-card * {
+    color: var(--text);
+}
+
+/* ===== ALERT ===== */
+.alert-success {
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}

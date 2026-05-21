@@ -1,0 +1,104 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Custom styles
+body {
+    background: $bg;
+    color: $text;
+}
+
+/* Карусель */
+#welcomeCarousel {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* затемнение для текста */
+.carousel-caption {
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    opacity: 0.7;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-box {
+    background: $surface;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+/* карточки */
+.cards {
+    margin-top: 30px;
+}
+
+.card {
+    background: $surface;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card-title {
+    color: white;
+}
+
+.card-text {
+    color: #cbd5e1;
+}
+
+/* кнопки */
+.btn-primary {
+    background: $primary;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* кнопка центр */
+.center-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* footer */
+footer {
+    background: #020617;
+}
