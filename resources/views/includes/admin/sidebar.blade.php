@@ -7,5 +7,11 @@
                 <p>Категории</p>
             </a>
         </li>
+        <li class="nav-item">
+            <a href="{{ route('admin.card.index') }}" class="nav-link">
+                <i class="nav-icon fas fa-sticky-note"></i>
+                <p>Карточки</p>
+            </a>
+        </li>
     </ul>
 </nav>

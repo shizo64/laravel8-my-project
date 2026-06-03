@@ -19,10 +19,7 @@
                 <div class="mb-3">
                     <label class="form-label">Текущее изображение</label><br>
                     @if($category->image)
-                        <img src="{{ str_starts_with($category->image, 'http') ? $category->image : asset('images/Home/HomeCards/' . $category->image) }}" 
-                             style="height: 100px; object-fit: cover; border-radius: 8px;">
-                    @else
-                        <span class="text-muted">Нет изображения</span>
+                <img src="{{ str_starts_with($category->image, 'http') ? $category->image : asset('images/categories/' . $category->image) }}" 
                     @endif
                 </div>
 

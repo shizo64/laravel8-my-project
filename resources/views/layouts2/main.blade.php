@@ -36,7 +36,7 @@
             @auth
             @if(Auth::user()->role === 'admin')
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.category.index') }}">Admin</a>
+                    <a class="nav-link" href="{{ route('admin.category.index') }}">Admin panel</a>
                 </li>
             @endif
             @endauth
@@ -56,11 +56,11 @@
             <ul class="navbar-nav ms-auto">
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        <a class="nav-link" href="{{ route('login') }}">Логин</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        <a class="nav-link" href="{{ route('register') }}">Регистрация</a>
                     </li>
                 @endguest
 
@@ -69,8 +69,8 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                             {{ Auth::user()->name }}
                         </a>
-
                         <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="{{ route('home') }}">Профиль</a>
                             <a class="dropdown-item text-danger"
                                href="{{ route('logout') }}"
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

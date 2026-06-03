@@ -30,7 +30,7 @@
                             <div class="col-auto">
                                 <!-- Иконка или изображение категории -->
                                 @if($category->image)
-                                    <img src="{{ $category->image }}" alt="" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
+                                    <img src="{{ str_starts_with($category->image, 'http') ? $category->image : asset('images/categories/' . $category->image) }}" alt="" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
                                 @else
                                     <i class="fas fa-folder fa-2x text-gray-300"></i>
                                 @endif

@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\Category\CategoryEditADController;
 use App\Http\Controllers\Admin\Category\CategoryDestroyController;
 use App\Http\Controllers\Admin\Category\CategoryCreateController;
 
-// ====== Публичные маршруты ======
+// Публичные маршруты
 Route::get('/', IndexPlaceController::class)->name('place.index');
 Route::get('/categories', [CategoriesController::class, 'index'])->name('categories.index');
 Route::get('/dictionary', [CategoriesController::class, 'dictionaryAll'])->name('dictionary.index');
@@ -24,14 +24,11 @@ Route::post('/place/card/{card}/progress', [CategoriesController::class, 'update
     ->middleware('auth')
     ->name('place.progress.update');
 
-// ====== Авторизация ======
+// Авторизация
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// ====== Карточки ======
-Route::post('/admin/cards/store', [CardController::class, 'store'])->name('admin.card.store');
-
-// ====== Админка ======
+//  Админка
 Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
 
     Route::get('/category', CategoryIndexController::class)->name('category.index');
@@ -42,4 +39,11 @@ Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
     Route::patch('/category/{category}', CategoryUpdateADController::class)->name('category.update');
     Route::delete('/category/{category}', CategoryDestroyController::class)->name('category.destroy');
 
+    // ====== Админ: карточки ======
+    Route::get('/cards', [\App\Http\Controllers\CardController::class, 'adminIndex'])->name('card.index');
+    Route::get('/cards/create', [\App\Http\Controllers\CardController::class, 'create'])->name('card.create');
+    Route::post('/cards', [\App\Http\Controllers\CardController::class, 'store'])->name('card.store');
+    Route::get('/cards/{card}/edit', [\App\Http\Controllers\CardController::class, 'edit'])->name('card.edit');
+    Route::patch('/cards/{card}', [\App\Http\Controllers\CardController::class, 'update'])->name('card.update');
+    Route::delete('/cards/{card}', [\App\Http\Controllers\CardController::class, 'destroy'])->name('card.destroy');
 });

@@ -133,13 +133,16 @@
 @push('styles')
 <style>
     .flip-card { perspective: 1200px; width: 100%; max-width: 450px; height: 500px; cursor: pointer; }
-    .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
+    .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+    transform-style: preserve-3d; }
     .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
-    .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 1.5rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+    .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; 
+    border-radius: 1.5rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
     .flip-card-front { background-color: #1e293b; color: white; display: flex; flex-direction: column; }
     .card-img-wrapper { height: 250px; width: 100%; }
     .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-    .flip-card-back { background: #0f172a; color: white; transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; border: 1px solid #60b3ff; }
+    .flip-card-back { background: #0f172a; color: white; transform: rotateY(180deg); display: flex; align-items: center;
+     justify-content: center; border: 1px solid #60b3ff; }
     .site-blue-text { color: #60b3ff; }
     .dictionary-word-cell { background-color: #334155; border: 1px solid #60b3ff; padding: 4px 10px; border-radius: 6px; }
     .carousel-item { transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; }
